@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+ <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+
+	<title>경청의페르소나만들기</title>
+	<style type="text/css">
+		html {
+			font-family: 'Gothic A1', sans-serif;
+			font-size: 1.2vw;
+			scroll-behavior: smooth;
+			}
+		body, h2, h3, h4, p, a, ul, li {
+			margin: 0; 
+			padding: 0; 
+			word-break: keep-all; 
+			text-decoration: none;
+		 	list-style:none;
+		 	color: black;
+			}
+
+		h1 { font-size: 6.5vw; font-weight: 300; }
+		h2 { font-size: 2vw; font-weight: 400;}
+		p {font-size: 1.6vw; line-height: 190%;}
+
+		nav {
+			position: sticky; 
+			top: 0;
+			z-index: 20;
+			vertical-align: baseline;
+			}
+
+		.desktop {
+			display: flex;
+			gap: 30px;
+			padding: 10px 0px;
+			border-bottom: solid 1px;
+			background: white;
+		}
+		.desktop li{
+			display: inline-block;
+		}
+		.desktop li a {
+			display: block;
+			padding: 10px 10px;
+			align-self: flex-end;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+  			transform-origin: bottom;
+						}
+		.desktop li a:hover {
+			animation-name: bounce;
+  			animation-timing-function: ease;
+		}
+		.desktop li a img {padding-left: 1vw;}
+		@keyframes bounce {
+		  0%   { transform: translateY(0); }
+		  50%  { transform: translateY(-10px); }
+		  100% { transform: translateY(0); }
+		}
+
+		.padding {
+			padding-top: 200px;
+			padding-bottom: 30px;}
+		.row {
+			width: 1200px;
+			margin: auto;
+			text-align: center;
+		}
+		.row img {
+			width: 40vw;
+		}
+		.row h1 {
+			width: 100%;
+			text-align: center;
+			height: auto;
+		}
+		.flex {
+			display: flex; 
+			flex-wrap: wrap;
+			}
+		.flex span {height: auto;}
+
+
+		.grid-container {
+		  display: grid;
+		  grid-template-columns:25vw auto;
+		  padding: 10px;
+		  height: auto;
+		}
+		.grid-img {
+			width: 80%;
+			overflow: hidden;
+		}
+		.grid-item {
+		  border: 1px solid white;
+		  padding: 20px;
+		  color: white;
+		  height: 20vh;
+		}
+		.grid-item img {
+			overflow: hidden;
+			height: 100%;
+		}
+		.Tgrid-container {
+		  display: grid;
+		  grid-template-columns: auto;
+		  background-color: black;
+		  padding: 10px;
+		  height: auto;
+		}
+		.Tgrid-item {
+		  padding: 10px;
+		  color: white;
+		  height: auto;
+		}
+		.Tgrid-item p {font-size: 1rem;}
+
+		.what {
+			width: 50vw;
+			background-color: black;
+		}
+	
+
+		@media screen and (max-width: 734px) {
+			.row {width: 95%;}
+			.row img {width: 50%;}
+			p {font-size: 1.5rem;}
+			.row h2 { width: 100%;background: red;}
+		}
+
+		.red {
+					background-color: red;
+					color: white;
+					padding: 5px 2px;
+				}
+		.center { text-align: center; margin: auto;}
+		.line {padding: 300px 0px;}
+		.top {padding-top: 5%;}
+		.top2 {padding-top: 15%;}
+		.bottom {padding-bottom: 15%;}
+		.black	{background: black;}
+		.black p {color: white;}
+		.bold {font-weight: 600; font-size: 1.3rem;}
+
+
+
+		.a1 label{
+			display: block;
+			margin: auto;
+			transition: all 0.4s;
+		}
+		#i1 {
+			display: none;
+		}
+		#i1:hover ~ #la1 {
+			transform: scaleY(1);
+		}
+
+		#la1 {
+			position: absolute;
+		    width: 100px;
+		    transform: scaleY(0);
+		    transform-origin: top;
+		    transition: all 0.3s;
+		}
+
+
+
+		.grid-containerf {
+				display: grid;
+				grid-template-rows: repeat(1, 1fr);
+				border: 1px solid black;
+				width: auto;
+				height: auto;
+				background-color: white;
+				}
+		 .grid-containerf div {
+		 	border-bottom: 1px solid black;
+		 	padding: 20px 20px;
+		 	line-height: 200%;
+		 	height: auto;
+		 }
+
+
+
+		#menuBtn:hover ~ .submenu {
+		    display: block;
+		    position: absolute;
+		    right: 600px;
+		    top: 1800px;
+		    background-color: white;
+		}
+
+		.submenu {
+		    display:none;
+		    background: #ccc;
+		}
+		#menuBtn1:hover ~ .submenu1 {
+		    display: block;
+		    position: absolute;
+		    right: 100px;
+		    top: 2700px;
+		    background-color: white;
+
+		}
+
+		.submenu1 {
+		    display:none;
+		    background: #ccc;
+		}
+
+		input {
+		    position: fixed;
+		    left: -9999px;
+		}
+
+		.waviy {
+		  position: relative;
+		}
+		.waviy span {
+		  position: relative;
+		  display: inline-block;
+		  font-size: 1rem;
+		  font-family: Noto Serif KR, serif;;
+		  text-transform: uppercase;
+		  animation: flip 2s infinite;
+		  animation-delay: calc(.2s * var(--i))
+		}
+		@keyframes flip {
+		  0%,80% {
+		    transform: rotateY(360deg) 
+		  }
+		}
+		.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+		.progress {cursor: progress;}
+
+
+		@media screen and (max-width: 734px) {
+			.grid-img img {width: 100%;}
+			.grid-img {width: 100px; background-color: blue;}
+			.top {padding-top: 3%;}
+			.top2 {padding-top: 10%;}
+			.padding {padding-top: 100px;
+								padding-bottom: 20px;}
+			.grid-container {text-align: center; grid-template-columns:12vw auto; padding: 5px;}
+			.grid-item { height: 100px; }
+			.imd {width: 100%;}
+			}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="center">
+			<ul class="desktop">
+				<li><a href="#00"><img src="navbar-07.svg" width="50%"></a></li>
+				<li><a href="#01"><span style="font-family: Noto Serif KR, serif;">서비스</span> 소개</a></li>
+				<li><a href="#02"><span style="font-family: Noto Serif KR, serif;">반응</span>하다</a></li>
+				<li><a href="clickme/index.html">실<span style="font-family: Noto Serif KR, serif;">천</span>하다</a></li>
+				<li><a href="clickme/index.html"><span style="font-family: Noto Serif KR, serif;">주의</span>하다</a></li>
+			</ul>
+		</div>
+	</nav>
+<section>
+	<div class="row flex padding" id="00">
+		<h1><span style="font-family: Noto Serif KR, serif; ">경청</span>의 페르소나 만들기</h1>
+	</div>
+
+</section>
+<section>
+	<div class="center">
+<div class="center waviy">
+   <h2>ㄴ 지루한 이야기가 들려올 때 <span class="red" style="--i:1">T</span>나지 않게 잘 들어주는 방법</h2>
+  </div>
+
+
+		<div class="line">
+			<img src="line.svg">
+		</div>
+	</div>
+</section>
+<section class="grabbing">
+	<div class="row center a1" id="01">
+		<p><img src="top.png"></p>
+		<p class="center">특별한 관심이 없는 / 지루한 / 매일 듣는  -  <br>이야기가 나와도 타인의 이야기를 잘 들어줄 수 있는 방법 ! <br>
+</p>
+</div>
+</section>
+
+	<div class="row center grabbing">
+		<input type="checkbox" id="menuBtn">
+            <p><label for="menuBtn"onclick=""><span class="red" style="font-family: Noto Serif KR, serif; text-decoration: underline;">경청의 페르소나
+			</span>를 만들어보세요</label></p>
+		  <div class="submenu">
+		  	<div class="grid-containerf center">
+		  		<div class="bold">페르소나란?</div>
+		  		<div>페르소나는 심리학에서 타인에게 비치는 외적 성격을 나타내는 <br>용어입니다. 심리학자 구스타프 융에 따르면 인간은 <br> 천 개의 페르소나를 지니고 있어 상황에 따라 적절한 페르소나를  <br>쓰고 관계를 이루어간다고 합니다.</div>
+		  	</div>
+        </div>
+	</div>
+
+<section>
+	<div class="row center top grabbing">
+		<p><img src="eye.png" ></p>
+		<p class="center">짧고 굵게 소개합니다<br></p>
+	</div>
+
+	<div class="row center">
+		<input type="checkbox" id="menuBtn1">
+           <p>제<label for="menuBtn1" onclick=""><span class="red" style="font-family: Noto Serif KR, serif; text-decoration: underline;">눈</span>을 바라보세요 경청해주세요</p>
+           	 <div class="submenu1">
+		  		<div class="grid-containerf center">
+		  			<div class="bold">눈이 어디에 있는데요?</div>
+		  			<div>웹페이지는 모든 스크린 화면이 눈이라고 생각하시면 됩니다. <br>얼른 눈을 마주하고 바라봐주세요!  <br>지금 이 글을 읽고 있다면 당신은 이미 <br>경청의 페르소나를 향한 준비가 끝났습니다. <br>이제 아래로 넘겨볼까요?</div>
+		  		</div>
+		  </div>
+	</div>
+
+ <div class="center top2 waviy">
+   <span style="--i:1">L</span>
+   <span style="--i:2">o</span>
+   <span style="--i:3">a</span>
+   <span style="--i:4">d</span>
+   <span style="--i:5">i</span>
+   <span style="--i:6">n</span>
+   <span style="--i:7">g</span>
+   <span style="--i:8">.</span>
+   <span style="--i:9">.</span>
+   <span style="--i:10">.</span>
+  </div>
+	<div class="center top">
+		<a class="center top"><img src="load.gif" width="70%"></a>
+	</div>
+</section>
+<section class="black progress">
+	<div class="center padding" id="02">
+		<p><span style="font-family: Noto Serif KR, serif; ">경청</span>의 페르소나 만들기</p>
+		<p>STEP BY STEP</p>
+	</div>
+
+<div class="center what">
+	<div class="grid-container top">
+  		<div class="grid-item">
+  			<img class="imd" src="num-1.svg" width="80%">
+  		</div>
+  		<div class="grid-item">
+  				<img class="grid-img" src="01.png">
+  		</div>
+	</div>
+	<div class="Tgrid-container bottom">
+		<div class="Tgrid-item"><p>ㄴ 몸을 앞으로 기울이고 <span class="red" style="font-family: Noto Serif KR, serif; text-decoration: underline;">왼쪽 무릎</span> 을 잡는다.</p></div>
+	</div>
+</div>
+</div>
+<div class="center what">
+	<div class="grid-container">
+  		<div class="grid-item">
+  			<img src="num-2.svg" width="80%">
+  		</div>
+  		<div class="grid-item">
+  			<img class="grid-img" src="02.png"></div>
+	</div>
+	<div class="Tgrid-container bottom">
+		<div class="Tgrid-item"><p>ㄴ (딴 생각 중이지만) 눈은 <span class="red" style="font-family: Noto Serif KR, serif; text-decoration: underline;">상대의 코 끝에</span> 고정하고 일단 고개를 끄덕이며 반응을 살핀다.</p></div>
+	</div>
+
+</div>
+<div class="center what">
+	<div class="grid-container">
+  		<div class="grid-item">
+  			<img src="num-3.svg" width="80%">
+  		</div>
+  		<div class="grid-item">
+  			<img class="grid-img" src="03.png"></div>
+	</div>
+	<div class="Tgrid-container bottom">
+		<div class="Tgrid-item"><p>ㄴ 흥미가 있다는 듯한 추임새를 넣어준다. <span class="red" style="font-family: Noto Serif KR, serif; text-decoration: underline;">괜히 오버</span> 해서 반응하는 것이 포인트.</p></div>
+	</div>
+
+<div class="center what">
+	<div class="grid-container">
+  		<div class="grid-item">
+  			<img src="num-4.svg" width="80%">
+  		</div>
+  		<div class="grid-item">
+  			<img class="grid-img" src="04.png"></div>
+	</div>
+	<div class="Tgrid-container">
+		<div class="Tgrid-item bottom" ><p>ㄴ 반응 유도형 질문이 들어온다면 <span class="red" style="font-family: Noto Serif KR, serif; text-decoration: underline;">‘그러니까’ ‘맞아’</span> 와 같은 보편적인 대답으로 위기를 모면한다.</p></div>
+	</div>
+
+
+	<div class="top bottom">
+		<p style="font-family: Noto Serif KR, serif;">알긴 알겠는데. <br>그래서 어떻게 쓸 수 있는데요?</p>
+	</div>
+
+	<div class="top">
+		<p><span style="font-family: Noto Serif KR, serif;">경청</span>의 페르소나<br><span class="red" style="text-decoration: underline;">일상 맛보기</span></p>
+		<div>
+			<a href="clickme/index.html"><img style=" width: 50vw;" src="clickme.png"></a>
+		</div>
+	</div>
+</div>
+</section>
+</body>
+</html>

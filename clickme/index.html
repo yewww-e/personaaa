@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+ <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+
+	<title>경청의페르소나만들기</title>
+	<style type="text/css">
+		html {
+			font-family: 'Gothic A1', sans-serif;
+			font-size: 1.2vw;
+			scroll-behavior: smooth;
+			}
+		body, h2, h3, h4, p, a, ul, li {
+			margin: 0; 
+			padding: 0; 
+			word-break: keep-all; 
+			text-decoration: none;
+		 	list-style:none;
+		 	color: black;
+			}
+
+		h1 { font-size: 6.5vw; font-weight: 300; }
+		h2 { font-size: 2vw; font-weight: 400;}
+		p {font-size: 1.6vw; line-height: 190%;}
+
+		nav {
+			position: sticky; 
+			top: 0;
+			z-index: 20;
+			vertical-align: baseline;
+			}
+
+		.desktop {
+			display: flex;
+			gap: 30px;
+			padding: 10px 0px;
+			border-bottom: solid 1px;
+			background: white;
+		}
+		.desktop li{
+			display: inline-block;
+		}
+		.desktop li a {
+			display: block;
+			padding: 10px 10px;
+			align-self: flex-end;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+  			transform-origin: bottom;
+						}
+		.desktop li a:hover {
+			animation-name: bounce;
+  			animation-timing-function: ease;
+		}
+		.desktop li a img {padding-left: 1vw;}
+		@keyframes bounce {
+		  0%   { transform: translateY(0); }
+		  50%  { transform: translateY(-10px); }
+		  100% { transform: translateY(0); }
+		}
+
+		.padding {
+			padding-top: 200px;
+			padding-bottom: 30px;}
+		.row {
+			width: 1200px;
+			margin: auto;
+			text-align: center;
+		}
+		.rowl {
+			width: 30%;
+			text-align: left;
+			padding: 60px;
+			padding-left: 20vw;
+		}
+		.rowr {
+			width: 80%;
+			text-align: right;
+		}
+		.row img {
+			width: 40vw;
+		}
+		.rowl img {width: 30vw;}
+		.row h1 {
+			width: 100%;
+			text-align: center;
+			height: auto;
+		}
+		.flex {
+			display: flex; 
+			flex-wrap: wrap;
+			}
+		.flex span {height: auto;}
+
+
+		.grid-container {
+		  display: grid;
+		  grid-template-columns: 30% 15% 10% 55%;
+		  height: auto;
+		}
+		.grid-item {
+		  border-bottom: 1px solid black;
+		  text-align: center;
+		  height: auto;
+		  padding: 10px;
+		}
+
+		.grid-item img {overflow: hidden; width: 100%;}
+
+		.one {
+			width: 100vw; height: 1000px;
+			background: url('jejuu.png');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+		}
+		.a51 {position: absolute;
+			  top: 80vh;
+			  right: 20vw;
+			}
+
+
+		.talk {
+			border-top: solid 1px gray;
+			border-bottom: solid 1px gray;
+			padding: 5px;
+		}
+		
+
+
+		.sticky {
+			position: sticky;
+			padding-top: 130px;
+			vertical-align: baseline;
+			background-color: white;
+			}
+
+
+		@media screen and (max-width: 734px) {
+			.row {width: 95%;}
+			.row img {width: 50%;}
+			p {font-size: 1.5rem;}
+			.row h2 { width: 100%;background: red;}
+		}
+
+
+		.red {
+					background-color: red;
+					color: white;
+					padding: 5px 2px;
+				}
+		.what {width: 70vw;}
+		.center { text-align: center; margin: auto;}
+		.line {padding: 300px 0px;}
+		.top {padding-top: 5%;}
+		.top2 {padding-top: 15%;}
+		.bottom {padding-bottom: 15%;}
+		.black	{background: black;}
+		.black p {color: white;}
+		.grid-top {border-top: solid 1px black; line-height: 120%; padding: 10px;}
+		.talk p {font-size: 1rem;}
+
+
+		.grid-item label {
+			height: 300px;
+			display: block;
+			overflow: hidden;
+			transition: all 1s;
+			color: black;
+			padding: 30px 10px;
+		}
+
+		.for label {
+			height: 3vh;
+			display: block;
+			overflow: hidden;
+			transition: all 1s;
+			color: black;
+			padding-top: 5vh;
+		}
+
+		.a51 label{
+			position: absolute;
+			top: 10vh;
+			right: 2vw;
+			width: 20vw;
+			height: 200px;
+			background-image: url('q.png');
+			background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: red;
+			display: block;
+			overflow: hidden;
+			transition: all 0.4s;
+			padding: 30px 10px;
+			animation: shake 0.5s;
+  			animation-iteration-count: infinite;
+		}
+		#i10 {
+			display: none;
+		}
+		#i10:hover + #la10 {
+			animation: none;
+			position: absolute;
+			top: 0vh;
+			right: 2vw;
+			height: 500px;
+			background-image: url('op1.png');
+			background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: unset;
+		}
+
+		.a52 label{
+			height: 300px;
+			background-image: url('q.png');
+			background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: red;
+			display: block;
+			overflow: hidden;
+			margin: auto;
+			transition: all 0.4s;
+			padding: 30px 10px;
+			animation: move 0.5s;
+  			animation-iteration-count: infinite;
+		}
+		#i11 {
+			display: none;
+		}
+		#i11:hover + #la11 {
+			animation: none;
+			width: 50vw;
+			background-image: url('op2.png');
+			background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: unset;
+		}
+
+		.a53 label{
+			width: 30vw;
+			height: 800px;
+			background-image: url('q.png');
+			background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: red;
+			display: block;
+			overflow: hidden;
+			margin: auto;
+			transition: all 0.4s;
+			padding: 30px 10px;
+			animation: shake 0.5s;
+  			animation-iteration-count: infinite;
+		}
+		#i12 {
+			display: none;
+		}
+		#i12:hover + #la12 {
+			animation: none;
+			width: 50vw;
+			background-image: url('op3.png');
+			background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: unset;
+		}
+		@keyframes shake {
+		  0% { transform: translate(1px, 1px) rotate(0deg); }
+		  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+		  20% { transform: translate(-3px, 0px) rotate(1deg); }
+		  30% { transform: translate(3px, 2px) rotate(0deg); }
+		  40% { transform: translate(1px, -1px) rotate(1deg); }
+		  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+		  60% { transform: translate(-3px, 1px) rotate(0deg); }
+		  70% { transform: translate(3px, 1px) rotate(-1deg); }
+		  80% { transform: translate(-1px, -1px) rotate(1deg); }
+		  90% { transform: translate(1px, 2px) rotate(0deg); }
+		  100% { transform: translate(1px, -2px) rotate(-1deg); }
+		}
+		@keyframes move {
+		  0% { transform: translate(1px, 1px) rotate(0deg); }
+		  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+		  20% { transform: translate(-3px, 0px) rotate(1deg); }
+		  30% { transform: translate(3px, 2px) rotate(0deg); }
+		  40% { transform: translate(1px, -1px) rotate(1deg); }
+		  50% { left: 500px;transform: translate(-1px, 2px) rotate(-1deg); }
+		  60% { transform: translate(-3px, 1px) rotate(0deg); }
+		  70% { transform: translate(3px, 1px) rotate(-1deg); }
+		  80% { transform: translate(-1px, -1px) rotate(1deg); }
+		  90% { transform: translate(1px, 2px) rotate(0deg); }
+		  100% { right: 500px;transform: translate(1px, -2px) rotate(-1deg); }
+		}
+
+
+		.grid-top a{line-height: 3vh;}
+		#i1 {display: none;}
+		#i2 {display: none;}
+		#i3 {display: none;}
+		#i1:hover + #la1 {
+			height: 800px;
+		}
+		#i2:hover + #la2 {
+			height: 800px;
+		}
+		#i3:hover + #la3 {
+			height: 800px;
+		}
+
+.help {cursor: help;}
+.copy {cursor: copy;}
+
+	</style>
+</head>
+<body class="help">
+
+
+
+	<nav>
+		<div class="center">
+			<ul class="desktop">
+				<li><a href="./../index.html"><img src="navbar-07.svg" width="50%"></a></li>
+				<li><a href="./../index.html"><span style="font-family: Noto Serif KR, serif;">서비스</span> 소개</a></li>
+				<li><a href="./../index.html"><span style="font-family: Noto Serif KR, serif;">반응</span>하다</a></li>
+				<li><a href="#01">실<span style="font-family: Noto Serif KR, serif;">천</span>하다</a></li>
+				<li><a href="#02"><span style="font-family: Noto Serif KR, serif;">주의</span>하다</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<section id="01">
+			<div class="center sticky">
+		<div class="topl">
+			<img src="line.svg">
+			<h2 class="topl">취향이 나와 완전 <span style="font-family: Noto Serif KR, serif; text-decoration: red wavy underline;">반대</span>인 사람</h2>
+		</div>
+	</div>
+	</section>
+
+
+	<section>
+		<div class="row one center">
+			<div class="a51">
+				<input type="checkbox" id="i10">
+				<label for="i10" id="la10"></label>
+			</div>
+		</div>
+	</section>
+
+
+	<section>
+			<div class="center sticky">
+		<div class="topl">
+			<img src="line.svg">
+			<h2 class="topl">소개팅에서 <span style="font-family: Noto Serif KR, serif; text-decoration: red wavy underline;">처음</span>보는 사람</h2>
+		</div>
+	</div>
+	</section>
+
+	<section>
+		<div class="rowl top2">
+			<img src="guitar.png">
+			<div class="talk">
+				<p>&#128540; : 안녕하세요~ 뭐 좋아하세요~? <br>저는 기타치는 것도 좋아하구 </p>
+			</div>
+		</div>
+
+		<div class="rowr">
+			<p> ... </p>
+		</div>
+
+		<div class="rowl">
+			<img src="musical.png">
+			<div class="talk">
+				<p>&#129297; : 뮤지컬 대박이죠. 전 뮤지컬 보러 가는 것도 좋아해요 </p>
+			</div>
+		</div>
+
+		<div class="rowr">
+			<p> ... <span style="font-family: Noto Serif KR">아~</span></p>
+		</div>
+
+		<div class="rowl">
+			<img src="hate.png">
+			<div class="talk">
+				<p>&#128545; : 근데 무작정 약속을 잡는 건 싫어해요 <br>무조건 계획주의라 ㅋㅋ. </p>
+			</div>
+		</div>
+
+		<div class="rowr">
+			<p> &#128564; <span style="font-family: Noto Serif KR">zzz</span></p>
+		</div>
+
+
+
+		<div class="center padding">
+		<p>아 진짜... 제가 하는 <span style="font-family: Noto Serif KR, serif; ">말 </span>듣고 있어요?</p>
+		</div>
+	</section>
+
+
+	<section>
+		<div class="row center">
+			<div class="a52 top">
+				<input type="checkbox" id="i11">
+				<label for="i11" id="la11"></label>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="copy">
+			<div class="center sticky top3">
+		<div class="topl">
+			<img src="line.svg">
+			<h2 class="topl">같은 이야기를 <span style="font-family: Noto Serif KR, serif; text-decoration: red wavy underline;">반복</span>하는사람</h2>
+		</div>
+	</div>
+	</section>
+
+
+	<section class="copy">
+		<div class="center row padding">
+			<img src="error.png">
+		</div>
+		<div class="center padding">
+			<img src="butterfly.gif" style="width: 20vw;">
+			<p>수천 번도..  <span style="font-family: Noto Serif KR, serif; ">더 들은 </span>이야기.. <br>어떻게 <span style="font-family: Noto Serif KR, serif; "> 반응</span> 하면 좋을까요..?</p>
+		</div>
+	</section>
+
+
+	<section class="copy">
+		<div class="row center">
+			<div class="a53 top2">
+				<input type="checkbox" id="i12">
+				<label for="i12" id="la12"></label>
+			</div>
+		</div>
+	</section>
+
+	<section>
+			<div class="center padding">
+			<p>자 어떤가요?<br> 어느정도 <span style="font-family: Noto Serif KR, serif; ">적응 </span>이 어떻게 <br> 조금 <br><span style="font-family: Noto Serif KR, serif; ">되</span>었나요?<br><br> 그렇다면 <span style="font-family: Noto Serif KR, serif; ">다행^^</span>입니다<br>이제 진짜 마지막이거든요!</p>
+		</div>
+	</section>
+
+	<section id="02" class="top2">
+			<div class="center sticky">
+		<div class="topl">
+			<img src="line.svg">
+			<h2 class="topl"><span style="font-family: Noto Serif KR, serif; text-decoration: red wavy underline;">주의</span>해줄래요?</h2>
+		</div>
+	</div>
+	</section>
+
+	<section>
+		<div class="center what top2">
+			<div class="grid-container">
+		  		<div class="grid-item"></div>
+		  		<div class="grid-item"><a style="font-weight: 700;">주의사항</a></div>
+		  		<div class="grid-item"><a style="font-weight: 700;">난이도</a></div>
+		  		<div class="grid-item"><a style="font-weight: 700;">준비물</a></div>
+			</div>
+
+			<div class="grid-container top">
+		  		<div class="grid-item">
+		  			<div>
+		  				<input type="checkbox" id="i1">
+						<label for="i1" id="la1"><img src="dont1.png"><br><br>
+							<div class="grid-top">
+								<span style="font-weight: 700;">하품을 한다면</span>
+							</div>
+							<div class="grid-top">
+								<a>내가 관심이 없다는 사실이 들켜버리고 맙니다!</a>
+							</div>
+							<div class="top2">
+								<a href="https://youtu.be/8BL5m91qfBQ"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>하품할 때 눈물이 나는 이유가 궁금하다면?</span></a>
+							</div>
+						</label>
+		  			</div>
+		  		</div>
+		  		<div class="grid-item"><a class="dont1 red" style="font-family: Noto Serif KR, serif; text-decoration: underline; font-weight: 600;">하아품</a></div>
+		  		<div class="grid-item"><a>하</a></div>
+		  		<div class="grid-item"><a>쏟아져나오는 하품을 막아줄 손</a></div>
+			</div>
+
+			<div class="grid-container top">
+		  		<div class="grid-item">
+		  			<div>
+		  				<input type="checkbox" id="i2">
+						<label for="i2" id="la2"><img src="dont2.png"><br><br>
+							<div class="grid-top">
+								<span style="font-weight: 700;">이것도 하고 저것도 한다면</span>
+							</div>
+							<div class="grid-top">
+								<a>시간도 보고 싶고 연락도 하고 싶고 괜히 잊고 있던 할 일도 생각나는 혼돈의 회오리. 견뎌주세요  지금은 생각을 비워주세요</a>
+							</div>
+							<div class="top2">
+								<a href="https://youtu.be/8BL5m91qfBQ"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>멀티태스킹은 진짜 효율을 높여줄까?</span></a>
+							</div>
+						</label>
+		  			</div>
+		  		</div>
+		  		<div class="grid-item"><a class="dont2 red" style="font-family: Noto Serif KR, serif; text-decoration: underline; font-weight: 600;">멀티태스킹</a></div>
+		  		<div class="grid-item"><a>중</a></div>
+		  		<div class="grid-item"><a>근질거리는 손과 생각을 멈춰줄 폐 (심호흡)</a></div>
+			</div>
+
+			<div class="grid-container top">
+		  		<div class="grid-item">
+		  			<div>
+		  				<input type="checkbox" id="i3">
+		  					<label for="i3" id="la3"><img src="dont3.png"><br><br>
+							<div class="grid-top">
+								<span style="font-weight: 700;">다리가 달달달 떨린다면</span>
+							</div>
+							<div class="grid-top">
+								<a>상대방의 입장에서 생각해보세요! 다리를 떤다는 것은 곧 집중하지 않고 있음을 티 나게 보여주는 행동이랍니다</a>
+							</div>
+							<div class="top2">
+								<a href="https://youtu.be/rZHW4gj5ufw"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>평소에는 혈액순환에 도움이 된다구요?</span></a>
+							</div>
+						</label>
+		  			</div>
+		  		</div>
+		  		<div class="grid-item"><a class="dont3 red" style="font-family: Noto Serif KR, serif; text-decoration: underline; font-weight: 600;">다리떨기</a></div>
+		  		<div class="grid-item"><a>상</a></div>
+		  		<div class="grid-item"><a>무릎 대신 춤을 춰줄 발가락</a></div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="center top2">
+		<p> 축하드립니다! <br><span style="font-family: Noto Serif KR, serif;">경청</span> 의 페르소나를 위한 모든 과정이 끝났습니다. <br>마스터한 <span style="font-family: Noto Serif KR, serif;">당신의 닉네임</span>을 남겨주세요 :) </p>
+		<form action="/action_page.php">
+			<div class="for">
+				<label for="username">name</label>
+			  <input type="text" id="username" name="username"><br><br>
+			  <input type="button" onclick="alert('경청의 페르소나 획득에 성공했습니다. 이제 실전입니다! 당신의 상황에 적용해보세요 행운을 빕니다 &#127808')" value="      &#129313;      ">
+			</div>
+		</form>
+	</section>
+
+	<footer>
+		<div class="mid top">
+			<div class="row">
+				<address>
+				<a style="font-size: 0.7rem;" href="https://instagram.com/yewww.e_studio?utm_medium=copy_link" target="_blank">경청의페르소나만들기 Copyright &copy; YEWWW All Rights Reserved</a><br><br>
+			</address>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
