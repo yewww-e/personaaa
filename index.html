@@ -214,8 +214,7 @@
 		#menuBtn:hover ~ .submenu {
 		    display: block;
 		    position: absolute;
-		    right: 600px;
-		    top: 1800px;
+		    top: 1700px;
 		    background-color: white;
 		}
 
@@ -272,7 +271,36 @@
 								padding-bottom: 20px;}
 			.grid-container {text-align: center; grid-template-columns:12vw auto; padding: 5px;}
 			.grid-item { height: 100px; padding: 0px;}
-			.imd {width: 100%; background-color: blue;}
+			.imd {width: 100%;}
+
+			#menuBtn:hover ~ .submenu	{opacity: 100%;}
+			#menuBtn1:hover ~ .submenu1	{opacity: 100%;}
+			#menuBtn:checked ~ .submenu {
+			    display: block;
+			    position: absolute;
+			    bottom: 0.5vw;
+			    background-color: white;}
+		  .submenu {
+			    display:none;
+			    background: #ccc;}
+
+			#menuBtn1:checked ~ .submenu1 {
+			    display: block;
+			    position: absolute;
+			    right: 0.5vw;
+			    z-index: 10;
+			    background-color: white;}
+		  .submenu1 {
+			    display:none;
+			    background: #ccc;}
+
+
+		 .grid-containerf div {
+				 	border-bottom: 1px solid black;
+				 	padding: 2vw;
+				 	line-height: 200%;
+				 	height: auto;
+		 }
 			}
 
 	</style>
