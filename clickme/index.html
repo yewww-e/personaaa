@@ -100,6 +100,14 @@
 			padding: 60px;
 			padding-left: 20vw;
 		}
+		.talk {
+			border-top: solid 1px gray;
+			border-bottom: solid 1px gray;
+			padding: 5px;
+		}
+	
+		#me {opacity: 10%;}
+		#me:hover {opacity: 100%; animation: in 2s;}
 		.rowr {
 			width: 80%;
 			text-align: right;
@@ -147,13 +155,6 @@
 			}
 
 
-		.talk {
-			border-top: solid 1px gray;
-			border-bottom: solid 1px gray;
-			padding: 5px;
-		}
-		
-
 
 		.sticky {
 			position: sticky;
@@ -168,6 +169,7 @@
 			.row img {width: 50%;}
 			p {font-size: 1.5rem;}
 			.row h2 { width: 100%;background: red;}
+			
 		}
 
 
@@ -296,6 +298,11 @@
             background-position: center;
             background-color: unset;
 		}
+
+		#blur:hover {  transition: all 1s ease; filter: blur(0.4rem);}
+	
+
+
 		@keyframes shake {
 		  0% { transform: translate(1px, 1px) rotate(0deg); }
 		  10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -323,6 +330,10 @@
 		  100% { right: 500px;transform: translate(1px, -2px) rotate(-1deg); }
 		}
 
+		@keyframes in {
+			from {width: 10%;}
+  			to {width: 30%;}
+			}
 
 		.grid-top a{line-height: 3vh;}
 		#i1 {display: none;}
@@ -341,6 +352,63 @@
 .help {cursor: help;}
 .copy {cursor: copy;}
 
+
+input#menuBtn {
+	display: none;
+}
+
+		 #menuBtn:checked ~ .submenu {
+		 	display: block;
+		    position: absolute;
+		    background-color: white;
+		    transition: all 1s ease; filter: blur(0rem);
+		 }
+
+		 .submenu {
+		 	display: none;
+		 	background: #ccc;
+		 }
+
+
+
+		.grid-containerf {
+				display: grid;
+				grid-template-rows: repeat(1, 1fr);
+				border: 1px solid black;
+				width: auto;
+				height: auto;
+				background-color: white;
+				}
+		 .grid-containerf div {
+		 	border-bottom: 1px solid black;
+		 	padding: 20px 20px;
+		 	line-height: 200%;
+		 	height: auto;
+		 }
+
+.line-1{
+    border-right: 1px solid black;
+    white-space: nowrap;
+    overflow: hidden;   
+  	position: relative;
+  	right: -60vw;
+  	text-align: left;
+}
+
+.anim-typewriter{
+  animation: typewriter 2s steps(44) 1s infinite normal,
+  blinkTextCursor 300ms steps(44) infinite normal;
+                }
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 2em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: black;}
+  to{border-right-color: transparent;}
+
+
 	</style>
 </head>
 <body class="help">
@@ -352,7 +420,7 @@
 			<ul class="desktop">
 				<li><a href="./../index.html"><img src="navbar-07.svg" width="50%"></a></li>
 				<li><a href="./../index.html"><span style="font-family: Noto Serif KR, serif;">서비스</span> 소개</a></li>
-				<li><a href="./../index.html"><span style="font-family: Noto Serif KR, serif;">반응</span>하다</a></li>
+				<li><a href="./../index.html#02"><span style="font-family: Noto Serif KR, serif;">반응</span>하다</a></li>
 				<li><a href="#01">실<span style="font-family: Noto Serif KR, serif;">천</span>하다</a></li>
 				<li><a href="#02"><span style="font-family: Noto Serif KR, serif;">주의</span>하다</a></li>
 			</ul>
@@ -389,30 +457,30 @@
 	</div>
 	</section>
 
-	<section>
-		<div class="rowl top2">
+	<section >
+		<div id="me" class="rowl top2">
 			<img src="guitar.png">
 			<div class="talk">
 				<p>&#128540; : 안녕하세요~ 뭐 좋아하세요~? <br>저는 기타치는 것도 좋아하구 </p>
 			</div>
 		</div>
 
-		<div class="rowr">
-			<p> ... </p>
+		<div class="row">
+			<p class="line-1 anim-typewriter"> ... </p>
 		</div>
 
-		<div class="rowl">
+		<div id="me" class="rowl">
 			<img src="musical.png">
 			<div class="talk">
 				<p>&#129297; : 뮤지컬 대박이죠. 전 뮤지컬 보러 가는 것도 좋아해요 </p>
 			</div>
 		</div>
 
-		<div class="rowr">
-			<p> ... <span style="font-family: Noto Serif KR">아~</span></p>
+		<div class="row">
+			<p class="line-1 anim-typewriter"> ... <span style="font-family: Noto Serif KR">아~</span></p>
 		</div>
 
-		<div class="rowl">
+		<div id="me" class="rowl">
 			<img src="hate.png">
 			<div class="talk">
 				<p>&#128545; : 근데 무작정 약속을 잡는 건 싫어해요 <br>무조건 계획주의라 ㅋㅋ. </p>
@@ -420,7 +488,7 @@
 		</div>
 
 		<div class="rowr">
-			<p> &#128564; <span style="font-family: Noto Serif KR">zzz</span></p>
+			<p class="line-1 anim-typewriter"> &#128564; <span style="font-family: Noto Serif KR">zzz</span></p>
 		</div>
 
 
@@ -453,7 +521,14 @@
 
 	<section class="copy">
 		<div class="center row padding">
-			<img src="error.png">
+			 <input type="checkbox" id="menuBtn">
+			<label for="menuBtn"onclick=""><img id="blur" src="error.png"></label>
+			<div class="submenu">
+	            <div class="grid-containerf center">
+	                <div class="bold"><span class="red">[경고]2022년 4월 18일에 재생한 이야기입니다</span></div>
+	                <div>아 내가 이거 말했었나?<br>아니 그래서 지난 축제 때 나랑 처음 본 사람이 <br> 나한테 자꾸 용식이 아니냐고 물어보는거야ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ <br>난 용식이가 아닌데 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ <br> 웃기지 않니? 나만 웃겨??</div>
+	            </div>
+     	   </div>
 		</div>
 		<div class="center padding">
 			<img src="butterfly.gif" style="width: 20vw;">
@@ -477,11 +552,11 @@
 		</div>
 	</section>
 
-	<section id="02" class="top2">
-			<div class="center sticky">
-		<div class="topl">
+	<section class="top2">
+			<div class="center sticky" id="02" >
+		<div class="topl" >
 			<img src="line.svg">
-			<h2 class="topl"><span style="font-family: Noto Serif KR, serif; text-decoration: red wavy underline;">주의</span>해줄래요?</h2>
+			<h2 class="topl" ><span style="font-family: Noto Serif KR, serif; text-decoration: red wavy underline;">주의</span>해줄래요?</h2>
 		</div>
 	</div>
 	</section>
@@ -507,7 +582,7 @@
 								<a>내가 관심이 없다는 사실이 들켜버리고 맙니다!</a>
 							</div>
 							<div class="top2">
-								<a href="https://youtu.be/8BL5m91qfBQ"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>하품할 때 눈물이 나는 이유가 궁금하다면?</span></a>
+								<a href="https://youtu.be/8BL5m91qfBQ" target="_blank"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>하품할 때 눈물이 나는 이유가 궁금하다면?</span></a>
 							</div>
 						</label>
 		  			</div>
@@ -529,7 +604,7 @@
 								<a>시간도 보고 싶고 연락도 하고 싶고 괜히 잊고 있던 할 일도 생각나는 혼돈의 회오리. 견뎌주세요  지금은 생각을 비워주세요</a>
 							</div>
 							<div class="top2">
-								<a href="https://youtu.be/8BL5m91qfBQ"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>멀티태스킹은 진짜 효율을 높여줄까?</span></a>
+								<a href="https://youtu.be/8BL5m91qfBQ" target="_blank"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>멀티태스킹은 진짜 효율을 높여줄까?</span></a>
 							</div>
 						</label>
 		  			</div>
@@ -551,7 +626,7 @@
 								<a>상대방의 입장에서 생각해보세요! 다리를 떤다는 것은 곧 집중하지 않고 있음을 티 나게 보여주는 행동이랍니다</a>
 							</div>
 							<div class="top2">
-								<a href="https://youtu.be/rZHW4gj5ufw"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>평소에는 혈액순환에 도움이 된다구요?</span></a>
+								<a href="https://youtu.be/rZHW4gj5ufw" target="_blank"><span style="font-family: Noto Serif KR, serif; text-decoration: underline; color: red;">막간 TMI<br><br>평소에는 혈액순환에 도움이 된다구요?</span></a>
 							</div>
 						</label>
 		  			</div>
