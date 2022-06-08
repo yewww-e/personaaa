@@ -154,24 +154,12 @@
 			  right: 20vw;
 			}
 
-
-
 		.sticky {
 			position: sticky;
 			padding-top: 130px;
 			vertical-align: baseline;
 			background-color: white;
 			}
-
-
-		@media screen and (max-width: 734px) {
-			.row {width: 95%;}
-			.row img {width: 50%;}
-			p {font-size: 1.5rem;}
-			.row h2 { width: 100%;background: red;}
-			
-		}
-
 
 		.red {
 					background-color: red;
@@ -349,13 +337,13 @@
 			height: 800px;
 		}
 
-.help {cursor: help;}
-.copy {cursor: copy;}
+		.help {cursor: help;}
+		.copy {cursor: copy;}
 
 
-input#menuBtn {
-	display: none;
-}
+		input#menuBtn {
+			display: none;
+		}
 
 		 #menuBtn:checked ~ .submenu {
 		 	display: block;
@@ -386,29 +374,79 @@ input#menuBtn {
 		 	height: auto;
 		 }
 
-.line-1{
-    border-right: 1px solid black;
-    white-space: nowrap;
-    overflow: hidden;   
-  	position: relative;
-  	right: -60vw;
-  	text-align: left;
-}
+		.line-1{
+		    border-right: 1px solid black;
+		    white-space: nowrap;
+		    overflow: hidden;   
+		  	position: relative;
+		  	right: -60vw;
+		  	text-align: left;
+		}
 
-.anim-typewriter{
-  animation: typewriter 2s steps(44) 1s infinite normal,
-  blinkTextCursor 300ms steps(44) infinite normal;
-                }
-
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 2em;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: black;}
-  to{border-right-color: transparent;}
+		.anim-typewriter{
+		  animation: typewriter 2s steps(44) 1s infinite normal,
+		  blinkTextCursor 300ms steps(44) infinite normal;
+		                }
 
 
+
+		@keyframes typewriter{
+		  from{width: 0;}
+		  to{width: 2em;}
+		}
+		@keyframes blinkTextCursor{
+		  from{border-right-color: black;}
+		  to{border-right-color: transparent;}
+		}
+
+		@media screen and (max-width: 734px) {
+			.row {width: 95%;}
+			.row img {width: 50%;}
+			p {font-size: 1.5rem;}
+			.sticky {
+				position: sticky;
+				padding-top: 10rem;
+				vertical-align: baseline;
+			}
+
+			.top {padding-top: 3%;}
+			.top2 {padding-top: 10%;}
+			.one {width: 100vw; height: 50rem;}
+
+			.a51 {
+			  background-color: red;
+			}
+			.a51 label{
+			position: absolute;
+			top:-48vh;
+			right: 2vw;
+			width: 20vw;
+			height: 10px;}
+
+			#i10 {
+			display: none;
+			}
+			#i10:checked + #la10 {
+				animation: none;
+				position: absolute;
+				top: -48vh;
+				right: 2vw;
+				height: 80px;
+				background-image: url('op1.png');
+				background-size: 80%;
+	            background-repeat: no-repeat;
+	            background-position: center;
+	            background-color: unset;
+			}
+			#i10:hover  {animation: none;
+				position: absolute;
+			top:-48vh;
+			right: 2vw;
+			width: 20vw;
+			height: 10px;
+			}
+			#me:checked {opacity: 100%; animation: in 2s;}
+		}
 	</style>
 </head>
 <body class="help">
