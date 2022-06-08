@@ -412,13 +412,14 @@
 			.top {padding-top: 3%;}
 			.top2 {padding-top: 10%;}
 			.one {width: 100vw; height: 50rem;}
+			.padding {padding-top: 100px;}
 
 			.a51 {
 			  background-color: red;
 			}
 			.a51 label{
 			position: absolute;
-			top:-48vh;
+			top:-43vh;
 			right: 2vw;
 			width: 20vw;
 			height: 10px;}
@@ -429,7 +430,7 @@
 			#i10:checked + #la10 {
 				animation: none;
 				position: absolute;
-				top: -48vh;
+				top: -43vh;
 				right: 2vw;
 				height: 80px;
 				background-image: url('op1.png');
@@ -440,12 +441,74 @@
 			}
 			#i10:hover  {animation: none;
 				position: absolute;
-			top:-48vh;
+			top:-43vh;
 			right: 2vw;
 			width: 20vw;
 			height: 10px;
 			}
 			#me:checked {opacity: 100%; animation: in 2s;}
+			#i11 {
+			display: none;
+			}
+			#i11:checked + #la11 {
+				animation: none;
+				width: 100%;
+				background-image: url('op2.png');
+				background-size: 80%;
+	            background-repeat: no-repeat;
+	            background-position: center;
+	            background-color: unset;
+			}
+			#blur:checked {  transition: all 1s ease; filter: blur(0.4rem);}
+			.a53 label{
+			width: 40vw;
+			height: 300px;
+			background-image: url('q.png');
+			background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: red;
+			display: block;
+			overflow: hidden;
+			margin: auto;
+			transition: all 0.4s;
+			padding: 30px 10px;
+			animation: shake 0.5s;
+  			animation-iteration-count: infinite;
+			}
+			#i12 {
+				display: none;
+			}
+			#i12:checked + #la12 {
+				animation: none;
+				width: 100%;
+				background-image: url('op3.png');
+				background-size: 80%;
+	            background-repeat: no-repeat;
+	            background-position: center;
+	            background-color: unset;
+			}
+			#i12:hover {all: none;}
+			.grid-top a{line-height: 1.8vh;}
+			.lev a{padding-left: 2em;}
+			.grid-item label {
+
+				height: 50px;
+				display: block;
+				overflow: hidden;
+				transition: all 1s;
+				color: black;
+				padding: 30px 10px;
+			}
+			#i1:checked + #la1 {
+			height: 340px;
+			}
+			#i2:checked + #la2 {
+				height: 480px;
+			}
+			#i3:checked + #la3 {
+				height: 480px;
+			}
 		}
 	</style>
 </head>
@@ -626,7 +689,7 @@
 		  			</div>
 		  		</div>
 		  		<div class="grid-item"><a class="dont1 red" style="font-family: Noto Serif KR, serif; text-decoration: underline; font-weight: 600;">하아품</a></div>
-		  		<div class="grid-item"><a>하</a></div>
+		  		<div class="grid-item lev"><a>하</a></div>
 		  		<div class="grid-item"><a>쏟아져나오는 하품을 막아줄 손</a></div>
 			</div>
 
@@ -648,7 +711,7 @@
 		  			</div>
 		  		</div>
 		  		<div class="grid-item"><a class="dont2 red" style="font-family: Noto Serif KR, serif; text-decoration: underline; font-weight: 600;">멀티태스킹</a></div>
-		  		<div class="grid-item"><a>중</a></div>
+		  		<div class="grid-item lev"><a>중</a></div>
 		  		<div class="grid-item"><a>근질거리는 손과 생각을 멈춰줄 폐 (심호흡)</a></div>
 			</div>
 
@@ -670,7 +733,7 @@
 		  			</div>
 		  		</div>
 		  		<div class="grid-item"><a class="dont3 red" style="font-family: Noto Serif KR, serif; text-decoration: underline; font-weight: 600;">다리떨기</a></div>
-		  		<div class="grid-item"><a>상</a></div>
+		  		<div class="grid-item lev"><a>상</a></div>
 		  		<div class="grid-item"><a>무릎 대신 춤을 춰줄 발가락</a></div>
 			</div>
 		</div>
